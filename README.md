@@ -12,5 +12,7 @@ A Copier template for Django projects with:
 
 ```bash
 # copier copy https://github.com/ricky-lim/django_template <project_dir> --data "secret_key=$(openssl rand -hex 32)"
-$ copier copy https://github.com/ricky-lim/django_template  . --data "secret_key=$(openssl rand -hex 32)"
+$ copier copy https://github.com/ricky-lim/django_template  teststore \
+    --data project_name=teststore \
+    --data "secret_key=$(openssl rand -hex 32)" 
 ```
