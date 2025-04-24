@@ -1,0 +1,21 @@
+# {{ project_name }}
+
+# Setup 
+
+## Local
+
+```bash
+uv venv
+source .venv/bin/activate
+uv sync
+```
+
+## Docker
+
+```bash
+# Development
+docker compose run --rm web python manage.py migrate
+docker compose run --rm web python manage.py test 
+
+docker compose up
+```

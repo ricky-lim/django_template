@@ -1,0 +1,15 @@
+project_name:
+  type: str
+  help: What is your project name?
+  validator: >-
+    {% if not project_name.isidentifier() %}
+    Project name must be a valid Python identifier
+    {% endif %}
+
+secret_key:
+    type: str
+    help: Django secret key
+    secret: true
+    default: ""
+
+_subdirectory: template
